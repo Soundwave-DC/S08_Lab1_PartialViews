@@ -1,10 +1,17 @@
 ﻿@model ZombieParty.Models.Weapon
 
-@{
+@if (Model.WeaponId != 0)
+{
+    ViewData["Title"] = "Edit";
+}
+else
+{
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+
+<h1> @ViewData["Title"] </h1>
+
 
 <h4>Weapon</h4>
 <hr />
@@ -58,10 +65,6 @@
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
