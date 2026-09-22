@@ -20,13 +20,13 @@ namespace ZombieParty.Controllers
             return View(weapons);
         }
 
-        public IActionResult Create()
+        public IActionResult Upsert()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Weapon weapon)
+        public IActionResult Upsert(Weapon weapon)
         {
             if (ModelState.IsValid)
             {
